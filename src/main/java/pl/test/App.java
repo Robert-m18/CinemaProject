@@ -109,7 +109,7 @@ public class App {
         }
     }
 
-
+//seats function
     public static void validateAndAddSeat(CinemaHall sala, int numer, LinkedList<Seat> wybraneSeats) {
         if (numer < 1 || numer > 50) {
             throw new InvalidSeatException("Numer miejsca poza zakresem 1–50");
