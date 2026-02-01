@@ -1,10 +1,11 @@
 package pl.test;
 import java.util.LinkedList;
+import java.util.List;
 
 
 public class CinemaHall {
     private final int numerSali;
-    private final LinkedList<Seat> miejsca = new LinkedList<>();
+    private final List<Seat> miejsca = new LinkedList<>();
 
     public CinemaHall(int numerSali) {
         this.numerSali = numerSali;
@@ -34,7 +35,7 @@ public class CinemaHall {
         return numerSali;
     }
 
-    public LinkedList<Seat> getMiejsca() {
+    public List<Seat> getMiejsca() {
         return miejsca;
     }
 }

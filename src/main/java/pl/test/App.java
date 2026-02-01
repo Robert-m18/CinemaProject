@@ -2,6 +2,8 @@ package pl.test;
 
 import java.util.InputMismatchException;
 import java.util.LinkedList;
+
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -19,7 +21,7 @@ public class App {
         Customer klient = new Customer("Robert Moczygęba", "rmoczygeba@gmail.com");
 
 
-        LinkedList<Seat> wybraneSeats = new LinkedList<>();
+        List<Seat> wybraneSeats = new LinkedList<>();
         do {
             wybraneSeats.clear();
             while (true) {
@@ -101,16 +103,17 @@ public class App {
             );
         }
     }
-    private static void validateNotSelected(LinkedList<Seat> wybraneSeats, Seat seat) {
+    private static void validateNotSelected(List<Seat> wybraneSeats, Seat seat) {
         if (wybraneSeats.contains(seat)) {
             throw new InvalidSeatException(
                     "Miejsce " + seat.getSeat() + " jest już wybrane"
             );
         }
+        System.out.printf("Pomyślnie wybrano miejsce!%n");
     }
 
 //seats function
-    public static void validateAndAddSeat(CinemaHall sala, int numer, LinkedList<Seat> wybraneSeats) {
+    public static void validateAndAddSeat(CinemaHall sala, int numer, List<Seat> wybraneSeats) {
         if (numer < 1 || numer > 50) {
             throw new InvalidSeatException("Numer miejsca poza zakresem 1–50");
         }

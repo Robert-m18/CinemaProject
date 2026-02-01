@@ -1,14 +1,16 @@
 package pl.test;
 
+import java.util.List;
+
 import java.util.LinkedList;
 
 public class Reservation {
     private final Customer klient;
     private final Screening seans;
-    private final LinkedList<Seat> selectedSeats;
+    private final List<Seat> selectedSeats;
     private Status status;
 
-    public Reservation(Customer klient, Screening seans, LinkedList<Seat> selectedSeats, Status status) {
+    public Reservation(Customer klient, Screening seans, List<Seat> selectedSeats, Status status) {
         this.klient = klient;
         this.seans = seans;
         this.selectedSeats = selectedSeats;
@@ -23,7 +25,7 @@ public class Reservation {
         return seans;
     }
 
-    public LinkedList<Seat> getSelectedSeats() {
+    public List<Seat> getSelectedSeats() {
         return selectedSeats;
     }
 

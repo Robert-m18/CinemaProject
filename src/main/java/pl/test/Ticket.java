@@ -1,13 +1,14 @@
 package pl.test;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class Ticket {
     private final Screening screening;
-    private final LinkedList<Seat> seats;
+    private final List<Seat> seats;
     private final double cena;
 
-    public Ticket(Screening screening, LinkedList<Seat> seats, double cena) {
+    public Ticket(Screening screening, List<Seat> seats, double cena) {
         this.screening = screening;
         this.seats = seats;
         this.cena = cena;
