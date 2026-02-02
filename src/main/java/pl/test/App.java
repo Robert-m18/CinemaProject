@@ -51,8 +51,7 @@ public class App {
                 System.out.println("Czy chcesz dodać kolejne miejsce? (Tak/Nie)");
                 if (!opcja(sc)) break;
             }
-
-
+        if (!wybraneSeats.isEmpty()) {
             Reservation reservation = new Reservation(klient, seans, wybraneSeats, Status.NOWA);
             ReservationService service = new ReservationService(reservation);
 
@@ -61,13 +60,14 @@ public class App {
             // Płatność (przykład z kartą)
             PaymentService paymentservice = new PaymentService("card");
             PaymentMethod payment = paymentservice.pay();
-            double cena = 24.50;
+            double cena = 24.50 * wybraneSeats.size();
             payment.pay(cena);
             System.out.println();
 
-            // Tworzymy i wypisujemy bilet
-            Ticket ticket = new Ticket(seans, wybraneSeats, cena);
-            System.out.println(ticket);
+                 // Tworzymy i wypisujemy bilet
+                 Ticket ticket = new Ticket(seans, wybraneSeats, cena);
+                 System.out.println(ticket);
+        }
 
 
             System.out.println("Czy chcesz zarejestrować kolejny bilet?");
@@ -77,16 +77,32 @@ public class App {
 
     static boolean opcja(Scanner sc) {
         while (true) {
-            String wybor = sc.nextLine();
-            if (wybor.equalsIgnoreCase("Tak")) {
-                return true;
-            } else if (wybor.equalsIgnoreCase("Nie")) {
-                return false;
-            } else {
-                System.out.println("Niepoprawny wybór, wpisz Tak lub Nie:");
+            String input = sc.nextLine();
+            Boolean decyzja = parseOption(input);
+
+            if (decyzja != null) {
+                return decyzja;
             }
+
+            System.out.println("Niepoprawny wybór, wpisz Tak lub Nie:");
         }
     }
+
+
+    static Boolean parseOption(String wybor) {
+        if (wybor == null) return null;
+
+        if (wybor.equalsIgnoreCase("Tak")) {
+            return true;
+        }
+        if (wybor.equalsIgnoreCase("Nie")) {
+            return false;
+        }
+        return null; // niepoprawny wybór
+    }
+
+
+
     private static Seat findSeat(CinemaHall sala, int numer) {
         return sala.getMiejsca()
                 .stream()
