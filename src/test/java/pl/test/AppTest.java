@@ -6,8 +6,7 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static pl.test.App.opcja;
-import static pl.test.App.validateAndAddSeat;
+import static pl.test.App.*;
 
 
 class AppTest {
@@ -26,10 +25,11 @@ Scanner sc = new Scanner(System.in);
     }
 
     @Test
-    void ShouldReturnTrueAndFalse(){
-        boolean result = opcja(sc);
-
-        assertTrue(result);
+    void ShouldReturnTrueAndFalseAndNull(){
+     assertTrue(parseOption("tak"));
+     assertFalse(parseOption("Nie"));
+     assertNotNull(parseOption("tAK"));
+     assertNull(parseOption("ddbfxb"));
     }
 
 
