@@ -74,7 +74,7 @@ public class App {
         } while (opcja(sc));
     }
 
-    // Metoda pomocnicza do wyboru Tak/Nie
+
     static boolean opcja(Scanner sc) {
         while (true) {
             String wybor = sc.nextLine();
