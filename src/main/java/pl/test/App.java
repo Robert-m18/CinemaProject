@@ -69,7 +69,7 @@ public class App {
             Ticket ticket = new Ticket(seans, wybraneSeats, cena);
             System.out.println(ticket);
 
-            // Sprawdzamy status miejsc w sali
+
             System.out.println("Czy chcesz zarejestrować kolejny bilet?");
         } while (opcja(sc));
     }
