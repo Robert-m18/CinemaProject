@@ -20,7 +20,7 @@ public class App {
         Screening seans = new Screening(starWars, sala, starWars.getCzasTrwania());
         Customer klient = new Customer("Robert Moczygęba", "rmoczygeba@gmail.com");
 
-
+//tworzenie listy
         List<Seat> wybraneSeats = new LinkedList<>();
         do {
             wybraneSeats.clear();
