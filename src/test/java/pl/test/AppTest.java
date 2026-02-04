@@ -33,7 +33,10 @@ Scanner sc = new Scanner(System.in);
     }
 
 
-
+@Test
+    void check(){
+        assertEquals(2,1);
+}
 }
 
 
