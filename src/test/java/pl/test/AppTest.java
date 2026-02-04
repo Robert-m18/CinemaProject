@@ -32,11 +32,6 @@ Scanner sc = new Scanner(System.in);
      assertNull(parseOption("ddbfxb"));
     }
 
-
-@Test
-    void check(){
-        assertEquals(2,1);
-}
 }
 
 
