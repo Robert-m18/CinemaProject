@@ -124,7 +124,7 @@ public class App {
         System.out.printf("Pomyślnie wybrano miejsce!%n");
     }
 
-//seats function
+
     public static void validateAndAddSeat(CinemaHall sala, int numer, List<Seat> wybraneSeats) {
         if (numer < 1 || numer > 50) {
             throw new InvalidSeatException("Numer miejsca poza zakresem 1–50");
