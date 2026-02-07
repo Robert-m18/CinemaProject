@@ -1,11 +1,12 @@
 package pl.test;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 
 public class CinemaHall {
     private final int numerSali;
-    private final List<Seat> miejsca = new LinkedList<>();
+    private final List<Seat> miejsca = new ArrayList<>();
 
     public CinemaHall(int numerSali) {
         this.numerSali = numerSali;
