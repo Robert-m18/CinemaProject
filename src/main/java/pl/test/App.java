@@ -1,10 +1,6 @@
 package pl.test;
 
-import java.util.InputMismatchException;
-import java.util.LinkedList;
-
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 
 public class App {
@@ -21,7 +17,7 @@ public class App {
         Customer klient = new Customer("Robert Moczygęba", "rmoczygeba@gmail.com");
 
 //tworzenie listy
-        List<Seat> wybraneSeats = new LinkedList<>();
+        List<Seat> wybraneSeats = new ArrayList<>();
         do {
             wybraneSeats.clear();
             while (true) {
