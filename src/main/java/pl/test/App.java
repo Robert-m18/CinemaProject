@@ -60,7 +60,7 @@ public class App {
             payment.pay(cena);
             System.out.println();
 
-                 // Tworzymy i wypisujemy bilet
+                 
                  Ticket ticket = new Ticket(seans, wybraneSeats, cena);
                  System.out.println(ticket);
         }
