@@ -1,7 +1,7 @@
 package pl.test;
 
 import java.util.function.Supplier;
-
+//ADAPTER
 public enum PaymentType {
     CARD(CardPayment::new);
 
