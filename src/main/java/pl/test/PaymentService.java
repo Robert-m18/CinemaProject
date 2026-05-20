@@ -1,5 +1,5 @@
 package pl.test;
-
+//FACTORY
 public class PaymentService {
     private final String payment;
 
